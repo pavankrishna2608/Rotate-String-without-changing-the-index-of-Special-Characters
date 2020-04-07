@@ -1,0 +1,12 @@
+inp1=input()
+d={}
+s=''
+for i in range(len(inp1)):
+    if inp1[i].isalnum()==False:
+        d.update({i:inp1[i]})
+    else:
+        s=s+inp1[i]
+rev=list(s[::-1])
+for i,j in d.items():
+    rev.insert(i,j)
+print(''.join(rev))
